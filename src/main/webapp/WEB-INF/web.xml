@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Auth -->
+  <servlet><servlet-name>LoginServlet</servlet-name><servlet-class>servlet.LoginServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>LoginServlet</servlet-name><url-pattern>/LoginServlet</url-pattern></servlet-mapping>
+
+  <servlet><servlet-name>LogoutServlet</servlet-name><servlet-class>servlet.LogoutServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>LogoutServlet</servlet-name><url-pattern>/LogoutServlet</url-pattern></servlet-mapping>
+
+  <!-- Registration -->
+  <servlet><servlet-name>UserRegisterServlet</servlet-name><servlet-class>servlet.UserRegisterServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>UserRegisterServlet</servlet-name><url-pattern>/UserRegisterServlet</url-pattern></servlet-mapping>
+
+  <servlet><servlet-name>VendorRegisterServlet</servlet-name><servlet-class>servlet.VendorRegisterServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>VendorRegisterServlet</servlet-name><url-pattern>/VendorRegisterServlet</url-pattern></servlet-mapping>
+
+  <!-- Product Management -->
+  <servlet><servlet-name>AddProductServlet</servlet-name><servlet-class>servlet.AddProductServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>AddProductServlet</servlet-name><url-pattern>/AddProductServlet</url-pattern></servlet-mapping>
+
+  <servlet><servlet-name>UpdateProductServlet</servlet-name><servlet-class>servlet.UpdateProductServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>UpdateProductServlet</servlet-name><url-pattern>/UpdateProductServlet</url-pattern></servlet-mapping>
+
+  <servlet><servlet-name>DeleteProductServlet</servlet-name><servlet-class>servlet.DeleteProductServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>DeleteProductServlet</servlet-name><url-pattern>/DeleteProductServlet</url-pattern></servlet-mapping>
+
+  <!-- NEW: Stock Management -->
+  <servlet><servlet-name>UpdateStockServlet</servlet-name><servlet-class>servlet.UpdateStockServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>UpdateStockServlet</servlet-name><url-pattern>/UpdateStockServlet</url-pattern></servlet-mapping>
+
+  <!-- User Management -->
+  <servlet><servlet-name>DeleteUserServlet</servlet-name><servlet-class>servlet.DeleteUserServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>DeleteUserServlet</servlet-name><url-pattern>/DeleteUserServlet</url-pattern></servlet-mapping>
+
+  <!-- NEW: Vendor Verification -->
+  <servlet><servlet-name>VerifyVendorServlet</servlet-name><servlet-class>servlet.VerifyVendorServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>VerifyVendorServlet</servlet-name><url-pattern>/VerifyVendorServlet</url-pattern></servlet-mapping>
+
+  <!-- NEW: Cart -->
+  <servlet><servlet-name>CartServlet</servlet-name><servlet-class>servlet.CartServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>CartServlet</servlet-name><url-pattern>/CartServlet</url-pattern></servlet-mapping>
+
+  <!-- NEW: Buy Now -->
+  <servlet><servlet-name>BuyNowServlet</servlet-name><servlet-class>servlet.BuyNowServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>BuyNowServlet</servlet-name><url-pattern>/BuyNowServlet</url-pattern></servlet-mapping>
+
+  <!-- Category browsing (session-aware, no logout side-effects) -->
+  <servlet><servlet-name>CategoryServlet</servlet-name><servlet-class>servlet.CategoryServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>CategoryServlet</servlet-name><url-pattern>/CategoryServlet</url-pattern></servlet-mapping>
+
+  <!-- Product Detail page -->
+  <servlet><servlet-name>ProductDetailServlet</servlet-name><servlet-class>servlet.ProductDetailServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>ProductDetailServlet</servlet-name><url-pattern>/ProductDetailServlet</url-pattern></servlet-mapping>
+
+</web-app>

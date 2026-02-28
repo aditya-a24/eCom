@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════════════
+   DASHBOARD EXTRAS — Product Images, OOS, Dark Mode Fixes
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Product Image in Cards ─────────────────────────────────── */
+.product-img-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--surface-alt);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.product-card:hover .product-img-wrap img { transform: scale(1.05); }
+
+.img-placeholder {
+  font-size: 2.8rem; color: var(--text-muted); user-select: none;
+}
+
+/* Multi-image thumbnails */
+.img-gallery {
+  position: absolute; bottom: 6px; right: 6px;
+  display: flex; gap: 4px;
+}
+.img-thumb {
+  width: 26px; height: 26px; border-radius: 4px;
+  border: 2px solid #fff; object-fit: cover;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.img-thumb:hover { opacity: 0.75; }
+
+/* Out-of-stock overlay */
+.oos-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.42);
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+}
+.oos-label {
+  background: #ef4444; color: #fff;
+  font-weight: 800; font-size: 0.82rem; letter-spacing: 0.5px;
+  padding: 5px 14px; border-radius: 30px; text-transform: uppercase;
+}
+
+/* ── Dark Mode — Text Visibility ────────────────────────────── */
+[data-theme="dark"] .product-name        { color: #fbfafb !important; }
+[data-theme="dark"] .product-desc        { color: #b0acbf !important; }
+[data-theme="dark"] .product-price       { color: #34d399 !important; }
+[data-theme="dark"] .product-stock       { color: #86819e !important; }
+[data-theme="dark"] .product-card-footer { background: #332b3f !important; }
+[data-theme="dark"] .product-img-wrap    { background: #2a2338 !important; }
+[data-theme="dark"] .badge-success       { color: #6ee7b7 !important; background: #064e2a !important; }
+[data-theme="dark"] .badge-danger        { color: #fca5a5 !important; background: #4c1414 !important; }
+[data-theme="dark"] .name-cell           { color: #fbfafb !important; }
+[data-theme="dark"] .price-cell          { color: #34d399 !important; }
+[data-theme="dark"] .styled-table td     { color: #c8c3d8 !important; }
+[data-theme="dark"] .page-header h2      { color: #fbfafb !important; }
+[data-theme="dark"] .page-header .subtitle { color: #86819e !important; }
+[data-theme="dark"] .tab-btn             { color: #c8c3d8 !important; }
+[data-theme="dark"] .tab-btn:hover       { color: #9585e0 !important; }
+[data-theme="dark"] .tab-btn.active      { color: #9585e0 !important; }
+[data-theme="dark"] .section-title       { color: #fbfafb !important; }
+[data-theme="dark"] .stat-number         { color: #9585e0 !important; }
+[data-theme="dark"] .stat-label          { color: #86819e !important; }
+[data-theme="dark"] input, [data-theme="dark"] select,
+[data-theme="dark"] textarea             { color: #fbfafb !important; background: #332b3f !important; }
+[data-theme="dark"] label                { color: #b0acbf !important; }
+[data-theme="dark"] .btn-secondary       { color: #c8c3d8 !important; border-color: #625d73 !important; }
+[data-theme="dark"] .nav-greeting        { color: #86819e !important; }
+[data-theme="dark"] .empty-state         { color: #86819e !important; background: #332b3f !important; }
+[data-theme="dark"] .alert-success       { color: #6ee7b7 !important; background: #064e2a !important; }
+[data-theme="dark"] .alert-danger        { color: #fca5a5 !important; background: #4c1414 !important; }
+[data-theme="dark"] .alert-info          { color: #bfdbfe !important; background: #1e3a5f !important; }
