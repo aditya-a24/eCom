@@ -15,15 +15,20 @@
         <class>entity.CartItem</class>
 
         <properties>
-            <property name="jakarta.persistence.jdbc.driver"   value="com.mysql.cj.jdbc.Driver"/>
-            <property name="jakarta.persistence.jdbc.url"      value="jdbc:mysql://localhost:3306/ecommerce_db?createDatabaseIfNotExist=true"/>
-            <property name="jakarta.persistence.jdbc.user"     value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="root"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://sql12.freesqldatabase.com:3306/your_db_name"/>
 
-            <property name="hibernate.dialect"        value="org.hibernate.dialect.MySQL8Dialect"/>
-            <property name="hibernate.show_sql"       value="true"/>
-            <property name="hibernate.format_sql"     value="true"/>
-            <property name="hibernate.hbm2ddl.auto"   value="update"/>
+            <property name="jakarta.persistence.jdbc.user"
+                      value="sql12818364"/>
+
+            <property name="jakarta.persistence.jdbc.password"
+                      value="7hl7g2tYrE"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
 
             <property name="hibernate.cache.use_second_level_cache" value="true"/>
             <property name="hibernate.cache.region.factory_class"
